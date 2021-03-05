@@ -18,4 +18,4 @@ All of the data is fetched using a [public API.](<https://goquotes.docs.apiary.i
 
 ## Built with
 
-- ReactJS
+- ReactJS, Redux

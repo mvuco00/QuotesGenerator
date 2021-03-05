@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getRandomQuotes, getQuotes } from "../store/actions";
+import { getRandomQuotes, filterByTag } from "../store/actions";
 import Quote from "./Quote";
 import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const dispatch = useDispatch();
   const [generate, setGenerate] = useState(false);
-  const allQuotes = useSelector((state) => state.quotes);
-  const loading = useSelector((state) => state.loading);
   const number = useSelector((state) => state.numberOfQuotes);
   const randomQuotes = useSelector((state) => state.randomQuotes);
+  const tag = useSelector((state) => state.tag);
 
   useEffect(() => {
-    dispatch(getQuotes());
-  }, [dispatch]);
+    if (tag === "") {
+      dispatch(getRandomQuotes(number));
+    } else {
+      dispatch(filterByTag(number, tag));
+    }
 
-  useEffect(() => {
-    dispatch(getRandomQuotes(number));
     setGenerate(false);
-  }, [dispatch, generate, number]);
+  }, [dispatch, generate, number, tag]);
 
   const handleClick = () => {
     setGenerate(true);

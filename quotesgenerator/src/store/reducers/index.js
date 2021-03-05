@@ -1,6 +1,8 @@
 const reducer = (
   state = {
     quotes: [],
+    tags: [],
+    tag: "",
     randomQuotes: [
       {
         text: "Your daily quote is...",
@@ -21,6 +23,11 @@ const reducer = (
         quotes: action.payload,
         loading: false,
       };
+    case "FETCH_TAGS":
+      return {
+        ...state,
+        tags: action.payload,
+      };
     case "ERROR_QUOTES":
       return {
         ...state,
@@ -28,6 +35,7 @@ const reducer = (
         error: action.payload,
       };
     case "FETCH_RANDOM_QUOTE":
+    case "FILTER_BY_TAG":
       return {
         ...state,
         loading: false,
@@ -38,6 +46,13 @@ const reducer = (
         ...state,
         numberOfQuotes: action.payload,
       };
+    case "SET_TAG": {
+      return {
+        ...state,
+        tag: action.payload,
+      };
+    }
+
     default:
       return state;
   }
