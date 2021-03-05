@@ -54,7 +54,6 @@ export const filterByTag = (number, tag) => {
         `https://goquotes-api.herokuapp.com/api/v1/random/${number}?type=tag&val=${tag}`
       )
       .then((res) => {
-        console.log(res.data.quotes);
         dispatch(setFilteredQuotes(res.data.quotes));
       })
       .catch((err) => {
