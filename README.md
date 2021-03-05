@@ -8,6 +8,7 @@
 </div>
 
 A random quote generator that displays a random quote to the user every time they press a button. User can choose number of quotes that will be generated.
+All of the data is fetched using a [public API.](<https://goquotes.docs.apiary.io/#reference/get-random-quote(s)/apiv1random>)
 
 <p float="left">
 <img src="images/quote.png" width="400">
