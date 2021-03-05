@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const setNumber = (number) => {
+  return {
+    type: "SET_NUMBER",
+    payload: number,
+  };
+};
+
 export const setQuotes = (quotes) => {
   return {
     type: "FETCH_QUOTES",

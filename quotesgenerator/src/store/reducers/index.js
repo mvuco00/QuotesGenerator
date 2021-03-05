@@ -33,7 +33,11 @@ const reducer = (
         loading: false,
         randomQuotes: action.payload,
       };
-
+    case "SET_NUMBER":
+      return {
+        ...state,
+        numberOfQuotes: action.payload,
+      };
     default:
       return state;
   }
