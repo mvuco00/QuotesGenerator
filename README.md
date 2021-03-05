@@ -7,7 +7,8 @@
  <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 </div>
 
-A random quote generator that displays a random quote to the user every time they press a button. User can choose number of quotes that will be generated and can select type of quote (general, motivational, movies, music ect.)
+A random quote generator that displays a random quote to the user every time they press a button. User can choose number and type of quotes (general, motivational, movies, music ect.) that will be generated.
+
 All of the data is fetched using a [public API.](<https://goquotes.docs.apiary.io/#reference/get-random-quote(s)/apiv1random>)
 
 <p float="left">
