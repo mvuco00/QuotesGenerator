@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { getTags, setTag, filterByTag } from "../store/actions";
 import DropdownNumbers from "./DropdownNumbers";
 
@@ -19,6 +20,12 @@ const Header = ({ setNumber }) => {
   return (
     <div className="header">
       <div className="dropdowns">
+        <Link to="/">
+          <button className="dropbtn all">Home</button>
+        </Link>
+        <Link to="/allquotes">
+          <button className="dropbtn all">AllQuotes</button>
+        </Link>
         <DropdownNumbers setNumber={setNumber} />
         <div className="dropdown">
           <button className="dropbtn">Types</button>
