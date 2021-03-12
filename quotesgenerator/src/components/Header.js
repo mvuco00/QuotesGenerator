@@ -7,6 +7,7 @@ import DropdownNumbers from "./DropdownNumbers";
 const Header = ({ setNumber }) => {
   const dispatch = useDispatch();
   const tags = useSelector((state) => state.tags);
+
   const number = useSelector((state) => state.numberOfQuotes);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ const Header = ({ setNumber }) => {
     dispatch(setTag(tag2));
     dispatch(filterByTag(number, tag2));
   };
+
   return (
     <div className="header">
       <div className="dropdowns">

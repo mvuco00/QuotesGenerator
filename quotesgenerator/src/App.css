@@ -125,3 +125,9 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #3f1336ad;
 }
+
+.allQuotesQuote {
+  color: rgba(255, 255, 255, 0.76);
+  padding: 10px;
+  font-size: 20px;
+}
