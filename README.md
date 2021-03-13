@@ -16,6 +16,7 @@ All of the data is fetched using a [public API.](<https://goquotes.docs.apiary.i
 <img src="images/quote.png" width="400">
 <img src="images/quotes.png" width="400">
 <img src="images/allquotes.png" width="400">
+<img src="images/pagination.png" width="400">
 
 </p>
 
