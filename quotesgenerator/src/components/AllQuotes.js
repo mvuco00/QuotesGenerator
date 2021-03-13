@@ -33,7 +33,13 @@ const AllQuotes = () => {
   return (
     <div className="allquotescontainer">
       {displayQuotes.map((quote, index) => {
-        return <AllQuotesQuote key={index} quoteText={quote.text} />;
+        return (
+          <AllQuotesQuote
+            key={index}
+            quoteText={quote.text}
+            author={quote.author}
+          />
+        );
       })}
       <ReactPaginate
         previousLabel={"Previous"}
