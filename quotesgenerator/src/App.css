@@ -125,9 +125,48 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #3f1336ad;
 }
+.allquotescontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .allQuotesQuote {
   color: rgba(255, 255, 255, 0.76);
   padding: 10px;
   font-size: 20px;
+  width: 600px;
+}
+
+.paginationButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  width: 80%;
+  height: 40px;
+  list-style: none;
+}
+
+.paginationButtons a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #252c3b;
+  cursor: pointer;
+  color: rgb(141, 118, 118);
+}
+
+.paginationButtons a:hover {
+  color: #252c3b;
+  background-color: rgb(141, 118, 118);
+}
+
+.paginationActive a {
+  color: white;
+  background-color: rgba(85, 69, 69, 0.562);
+}
+
+.paginationDisabled a {
+  color: #252c3b;
 }
